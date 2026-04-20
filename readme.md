@@ -8,3 +8,8 @@ Pada milestone ini saya memahami bahwa method `handle_connection` tidak lagi han
 
 ![Commit 2 screen capture](/assets/images/commit2.png)
 
+## Commit 3 Reflection notes
+
+Pada milestone ini saya belajar bahwa web server tidak cukup hanya mengirim satu file yang sama untuk semua request, karena server harus bisa membedakan path yang valid dan path yang tidak tersedia. Saya memahami bahwa request line seperti `GET / HTTP/1.1` dapat dipakai sebagai dasar untuk menentukan response apa yang akan diberikan oleh server. Dengan menggunakan `match`, program menjadi lebih jelas karena setiap pola request dipetakan ke pasangan `(status_line, filename)` yang sesuai. Menurut saya, bagian refactoring ini penting karena logika pemilihan response dipisahkan dari logika pembacaan file dan pengiriman response, sehingga kode menjadi lebih rapi, mudah dibaca, dan lebih mudah dikembangkan di milestone berikutnya. Kalau semua logika dicampur dalam satu blok panjang, program akan semakin sulit dipahami saat jumlah route bertambah. Saya juga memahami bahwa status `HTTP/1.1 404 NOT FOUND` adalah cara standar server memberi tahu browser bahwa resource yang diminta tidak tersedia. Dengan adanya file `404.html`, server bisa memberikan feedback yang lebih baik kepada pengguna dibandingkan hanya diam atau tetap mengirim halaman utama. Dari milestone ini saya mulai melihat pentingnya desain kode yang terstruktur, bukan hanya agar program jalan, tetapi juga agar mudah dirawat dan dikembangkan ketika fitur web server bertambah.
+
+![Commit 3 screen capture](/assets/images/commit3.png)
